@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="card" style="padding: 20px">
+        <form #registerForm = "ngForm" (ngSubmit) = "register(registerForm)">
+            <input
+            ngModel
+            type="text" 
+            name="username" 
+            id="username"
+            placeholder="Enter your username"
+            class="form-control mb-3"
+            >
+            <input
+            ngModel
+            type="password" 
+            name="password" 
+            id="password"
+            placeholder="Enter your password"
+            class="form-control mb-3"
+            >
+            <input 
+            type="submit" 
+            value="Register"
+            class="btn btn-outline-primary form-control rounded-0"
+            >
+        </form>
+    </div>
+    <p *ngIf="errorMessage">{{errorMessage}}</p>
+</div>

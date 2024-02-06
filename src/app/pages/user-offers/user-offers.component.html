@@ -1,0 +1,26 @@
+
+<div *ngIf="offers.length < 1" class="container mt-5">
+  <div class="card text-center" style="padding: 20px; color: red;">
+      <h1>No offers here</h1>
+  </div>
+</div>
+
+<div *ngIf="offers.length >= 1" class="offers mt-5">
+  <div class="overflow-hidden bg-white shadow sm:rounded-md w-50">
+    <ul role="list" class="divide-y divide-gray-200">
+      <div *ngFor="let offer of offers" class="flex flex-col mb-2">
+        <li class="px-4 py-4 sm:px-6 text-center">
+          <p>
+            <a [routerLink]="['/single-house-page', offer.buyerId]">New offer!</a>
+          </p>
+          <p *ngIf="offer.payment.length < 2">Additional payment: none!</p>
+          <p *ngIf="offer.payment.length > 2">Additional payment: {{offer.payment}}!</p>
+        </li>
+        <div class="self-center">
+          <button (click)="acceptOffer(offer.id,offer.buyerId,this.houseId)" class="btn btn-primary mr-5">Accept</button>
+          <button (click)="deleteOffer(offer.id)" class="btn btn-danger">Reject</button>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

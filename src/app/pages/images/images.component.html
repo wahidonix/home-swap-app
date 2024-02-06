@@ -1,0 +1,16 @@
+<div class="max-w-2xl mx-auto bg-white rounded-md overflow-hidden shadow-md mt-5">
+    <div class="p-4">
+      <div>
+          <h2>Image Upload</h2>
+          <input type="file" (change)="onFileChanged($event)">
+          <button class="btn btn-primary" (click)="onUpload(this.houseId)">Upload</button>
+      </div>
+  
+      <div class="mt-2 text-gray-600">
+        <div class="mt-4 grid grid-cols-2 gap-4"> <!-- Increased the number of columns to make images bigger -->
+            <img *ngFor="let image of images" [src]="getImageUrl(image)" [alt]="image.fileName" class="w-full h-80 object-cover rounded-md"> <!-- Increased the height -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

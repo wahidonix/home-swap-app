@@ -1,0 +1,55 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">Home Swap App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li *ngIf="this.matchingRoles('Admin')" class="nav-item">
+            <a  class="nav-link active" aria-current="page" routerLink="/admin">Admin route</a>
+          </li>
+          <li *ngIf="this.matchingRoles('Admin')" class="nav-item">
+            <a  class="nav-link active" aria-current="page" routerLink="/users">Users</a>
+          </li>
+          <li *ngIf="this.matchingRoles('User')" class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/user">User route</a>
+          </li>
+        </ul>
+        <button *ngIf="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
+        <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click) = "logout()">Logout</button>
+      </div>
+    </div>
+  </nav> -->
+
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center">
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a routerLinkActive="active" routerLink="/home" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('Admin')" routerLink="/admin" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Admin route</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('Admin')" routerLink="/offers-done" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Offers done</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('Admin')" routerLink="/users" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Users</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('Admin')" routerLink="/admin-houses" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Houses</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('User')" routerLink="/user" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">User route</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('User')" routerLink="/available-houses" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Houses</a>
+              <a routerLinkActive="active" *ngIf="this.matchingRoles('User')" routerLink="/single" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My house</a>
+              <!-- <a routerLinkActive="active" *ngIf="this.matchingRoles('User')" [routerLink]="['/my-houses', id]" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My House</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button routerLinkActive="active" *ngIf="!isLoggedIn()" type="button" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" routerLink="/login">Login</button>
+          <button routerLinkActive="active" *ngIf="!isLoggedIn()" type="button" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" routerLink="/register">Register</button>
+          <button routerLinkActive="active" *ngIf="isLoggedIn()" type="button" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
