@@ -28,6 +28,7 @@ import { ShowFirstComponent } from './pages/show-first/show-first.component';
 import { ShowSecondComponent } from './pages/show-second/show-second.component';
 import { ImagesComponent } from './pages/images/images.component';
 import { CheckImagesComponent } from './pages/check-images/check-images.component';
+import { OfferImagesComponent } from './pages/offer-images/offer-images.component';
 
 
 
@@ -54,7 +55,8 @@ import { CheckImagesComponent } from './pages/check-images/check-images.componen
     ShowFirstComponent,
     ShowSecondComponent,
     ImagesComponent,
-    CheckImagesComponent
+    CheckImagesComponent,
+    OfferImagesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HouseService {
 
-  URL = 'https://localhost:7297/api/';
+  URL = 'https://alen-api.onrender.com/api/';
 
 
   constructor(

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HouseService } from 'src/app/services/house.service';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-single-house-page',
@@ -10,9 +11,11 @@ import { HouseService } from 'src/app/services/house.service';
 export class SingleHousePageComponent implements OnInit{
   userId:any;
   house:any;
+  images:any;
   constructor(
     private route: ActivatedRoute,
-    private houseService: HouseService
+    private houseService: HouseService,
+    private imageService: ImageService
   ){}
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -20,6 +23,20 @@ export class SingleHousePageComponent implements OnInit{
     })
     this.getHouseById();
   }
+
+  getImagesByHouseId(id:any){
+    this.imageService.getImageByHouseId(id).subscribe(
+    (response)=>{
+      this.images = response;
+      console.log(this.images);
+      
+    },
+    (error)=>{
+      console.log(error);
+      
+    }
+  )
+}
 
   getHouseById(){
     return this.houseService.getSingleHouse(this.userId).subscribe(

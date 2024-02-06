@@ -6,7 +6,7 @@ import { UserAuthService } from './user-auth.service';
   providedIn: 'root'
 })
 export class MembersService {
-  URL = 'https://localhost:7297/api/';
+  URL = 'https://alen-api.onrender.com/api/';
 
 
   constructor(

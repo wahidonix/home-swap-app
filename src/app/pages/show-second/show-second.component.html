@@ -1,5 +1,5 @@
 <div class="max-w-2xl mx-auto bg-white rounded-md overflow-hidden shadow-md mt-5">
-    <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdXNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Your Home Image" class="w-full h-64 object-cover object-center">
+    <img src="https://i0.wp.com/movingtips.wpengine.com/wp-content/uploads/2022/01/house-swap.jpg?fit=1200%2C800&ssl=1" alt="Your Home Image" class="w-full h-64 object-cover object-center">
     <div class="p-4">
       <div class="text-2xl font-semibold text-gray-800">My Home Details</div>
       <div class="mt-2 text-gray-600">
@@ -20,5 +20,6 @@
           Garage: {{house.garage}}
         </p>
       </div>
+      <button [routerLink]="['/offer-images', house.id]" class="btn btn-primary mt-4">See images</button>
     </div>
   </div>

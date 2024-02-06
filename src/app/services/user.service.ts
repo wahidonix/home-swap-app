@@ -6,7 +6,7 @@ import { UserAuthService } from './user-auth.service';
   providedIn: 'root'
 })
 export class UserService {
-  URL = 'https://localhost:7297/api/';
+  URL = 'https://alen-api.onrender.com/api/';
   reaquestHeader = new HttpHeaders(
     {"No-Auth": "True"}
   )

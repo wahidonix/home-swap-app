@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ImageService {
-  URL = 'https://localhost:7297/api/';
+  URL = 'https://alen-api.onrender.com/api/';
 
   constructor(
     private httpClient: HttpClient,
